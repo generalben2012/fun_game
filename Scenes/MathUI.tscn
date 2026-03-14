@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://mathui123"]
+
+[ext_resource type="Script" path="res://Scripts/MathUI.gd" id="1_bcd"]
+
+[node name="MathUI" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_bcd")
+
+[node name="BlackboardRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.133333, 0.231373, 0.156863, 1)
+
+[node name="TitleLabel" type="Label" parent="BlackboardRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+text = "- 수리 영창 - "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuestionLabel" type="Label" parent="BlackboardRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -60.0
+offset_right = 200.0
+offset_bottom = 20.0
+theme_override_font_sizes/font_size = 48
+text = "7 x 8 = ?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnswerInput" type="LineEdit" parent="BlackboardRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -120.0
+offset_right = 100.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+placeholder_text = "정답력"
+alignment = 1
+
+[node name="ResultLabel" type="Label" parent="BlackboardRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1

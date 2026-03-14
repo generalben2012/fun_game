@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://mainworld123"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Player.tscn" id="1_player"]
+[ext_resource type="PackedScene" path="res://Scenes/MathUI.tscn" id="2_mathui"]
+[ext_resource type="Script" path="res://Scripts/Grid.gd" id="3_gridscript"]
+
+[node name="MainWorld" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+offset_left = -2000.0
+offset_top = -2000.0
+offset_right = 2000.0
+offset_bottom = 2000.0
+color = Color(0.12, 0.12, 0.12, 1)
+
+[node name="Grid" type="ColorRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+script = ExtResource("3_gridscript")
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+position = Vector2(640, 360)
+
+[node name="MathUI" parent="." instance=ExtResource("2_mathui")]
