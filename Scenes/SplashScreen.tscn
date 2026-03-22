@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://splash12345"]
+
+[ext_resource type="Script" path="res://Scripts/SplashScreen.gd" id="1_splash"]
+
+[node name="SplashScreen" type="CanvasLayer"]
+script = ExtResource("1_splash")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.02, 0.08, 0.05, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SplashLabel" type="Label" parent="CenterContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0.5, 1)
+theme_override_colors/font_outline_color = Color(0.8, 0.3, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 12
+theme_override_constants/shadow_outline_size = 8
+theme_override_font_sizes/font_size = 70
+text = "수포자 출입 금지...
+이과생을 위한 완벽한 공간..."
+horizontal_alignment = 1
+vertical_alignment = 1
